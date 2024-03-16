@@ -8,7 +8,7 @@ action=$(DIALOGRC=/tmp/.dialogrc dialog --stdout --erase-on-exit --menu "Choose 
 
 
 if [[ $action == "Install" || $action == "Remove" ]]; then 
-  package=$(apt list 2>/dev/null | awk -F'/' 'NR>1{print $1}' | fzf)
+  package=$(apt-cache search '' | sort | cut --delimiter ' ' --fields 1 | fzf --multi --cycle --reverse --preview 'apt-cache show {1}')
   sudo apt ${action,,} $package -y
 elif [[ $action == "Update" || $action == "Upgrade" ]]; then 
   sudo apt ${action,,} -y
