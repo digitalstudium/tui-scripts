@@ -9,7 +9,7 @@ GUI scripts for popular cli tools, based on dialog and fzf
 - `r` - for running named commands from ~/.aliases.txt file
 
 ## Installation
-Download .deb package from Releases, then install it
+Download .deb package from [Releases](https://git.digitalstudium.com/digitalstudium/run/releases), then install it
 ```
 sudo apt install ./Downloads/gui-scripts_1.1-1.deb
 ```
