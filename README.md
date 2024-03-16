@@ -12,7 +12,7 @@ GUI scripts for popular cli tools, based on dialog and fzf
 ### Ubuntu/Debian-based
 Download .deb package from [Releases](https://git.digitalstudium.com/digitalstudium/run/releases), then install it
 ```
-sudo apt install ./Downloads/gui-scripts_1.1-1.deb
+sudo apt install ~/Downloads/gui-scripts_*.deb
 ```
 ### Other linux distros
 Install dependencies: `fzf`, `dialog`, `xdotool`, `x11-xkb-utils`
