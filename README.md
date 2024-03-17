@@ -27,7 +27,7 @@ sudo cp gui-scripts/{a,g,s,r} /usr/local/bin/
 
 ## Screenshots
 ### s
-![Choose service](./screenshots/2024-03-16-191251_1897x1003_scrot.png)
+![Choose service](./screenshots/2024-03-16-192529_1883x1000_scrot.png)
 ![Choose action](./screenshots/2024-03-16-192537_749x517_scrot.png)
 ### g
 ![Choose action](./screenshots/2024-03-16-191200_847x602_scrot.png)
