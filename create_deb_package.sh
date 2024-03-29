@@ -1,3 +1,4 @@
+rm -rf gui-scripts*
 mkdir -p gui-scripts_$(cat VERSION)-1/usr/local/bin
 mkdir -p gui-scripts_$(cat VERSION)-1/DEBIAN
 
