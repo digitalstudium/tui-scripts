@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+trap 'clear' SIGINT
 cat > /tmp/.dialogrc << EOL
 # Item color
 tag_color = (BLACK,WHITE,ON)
