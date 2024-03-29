@@ -6,7 +6,7 @@ cat > /tmp/.dialogrc << EOL
 tag_color = (BLACK,WHITE,ON)
 EOL
 set +ex
-action=$(DIALOGRC=/tmp/.dialogrc dialog --stdout --erase-on-exit --menu "Choose the action for git" 10 40 0 'Add all && Commit && Push' 1 "Add all" 2 "Commit" 3 "Push" 4)
+action=$(DIALOGRC=/tmp/.dialogrc dialog --stdout --erase-on-exit --menu "Choose the action for git" 10 40 0 'Add all && Commit && Push' 1 "Add all" 2 "Commit" 3 "Push" 4 "Status" 5)
 
 #echo $action
 #exit
@@ -23,4 +23,6 @@ elif [[ $action == "Commit" ]]; then
   git commit -"m $commit_message"
 elif [[ $action == "Push" ]]; then 
   git push
+elif [[ $action == "Status" ]]; then 
+  git status
 fi

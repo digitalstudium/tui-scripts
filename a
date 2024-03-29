@@ -5,12 +5,14 @@ cat > /tmp/.dialogrc << EOL
 # Item color
 tag_color = (BLACK,WHITE,ON)
 EOL
-action=$(DIALOGRC=/tmp/.dialogrc dialog --stdout --erase-on-exit --menu "Choose the action for apt" 10 40 0 "Update" 1 "Upgrade" 2 "Install" 3 "Remove" 4)
+action=$(DIALOGRC=/tmp/.dialogrc dialog --stdout --erase-on-exit --menu "Choose the action for apt" 10 40 0 "Install" 1 "Install from .deb file" 2 "Update" 3 "Upgrade" 4 "Remove" 5 "Autoremove" 6)
 
 
 if [[ $action == "Install" || $action == "Remove" ]]; then 
   package=$(apt-cache search '' | sort | cut --delimiter ' ' --fields 1 | fzf --multi --cycle --reverse --preview 'apt-cache show {1}')
   sudo apt ${action,,} $package -y
-elif [[ $action == "Update" || $action == "Upgrade" ]]; then 
+elif [[ $action == "Install from .deb file" ]]; then 
+  find ~ -name *.deb | fzf | xargs -I _ sudo apt install -y _
+elif [[ $action == "Update" || $action == "Upgrade" || $action == "Autoremove"  ]]; then 
   sudo apt ${action,,} -y
 fi
