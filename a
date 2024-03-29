@@ -12,7 +12,7 @@ if [[ $action == "Install" || $action == "Remove" ]]; then
   package=$(apt-cache search '' | sort | cut --delimiter ' ' --fields 1 | fzf --multi --cycle --reverse --preview 'apt-cache show {1}')
   sudo apt ${action,,} $package -y
 elif [[ $action == "Install from .deb file" ]]; then 
-  find ~ -name *.deb | fzf | xargs -I _ sudo apt install -y _
+  find ~ -name "*.deb" | fzf | xargs -I _ sudo apt install -y _
 elif [[ $action == "Update" || $action == "Upgrade" || $action == "Autoremove"  ]]; then 
   sudo apt ${action,,} -y
 fi
