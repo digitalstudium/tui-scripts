@@ -7,6 +7,8 @@ GUI scripts for popular cli tools, based on dialog and fzf
 - `g` - for managing git repo
 - `s` - for managing systemd services
 - `r` - for running named commands from ~/.aliases.txt file
+- `e` - open `lf` file manager
+- `lk` - listen for keys above (except `r`)
 
 See [Screenshots](#screenshots) section
 
