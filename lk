@@ -1,13 +1,13 @@
 #!/bin/bash
 
-clear && echo Listen to keys...
+clear
 while true; do
 echo Listen to keys...
 read -rsn1 input
 if [ "$input" = "a" ]; then
     a
-elif [ "$input" = "e" ]; then
-    e
+elif [ "$input" = "f" ]; then
+    f
 elif [ "$input" = "g" ]; then
     g
 elif [ "$input" = "s" ]; then
