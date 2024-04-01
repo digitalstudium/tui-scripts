@@ -1,0 +1,18 @@
+#!/bin/bash
+
+clear && echo Listen to keys...
+while true; do
+clear && echo Listen to keys...
+read -rsn1 input
+if [ "$input" = "a" ]; then
+    a
+elif [ "$input" = "e" ]; then
+    e
+elif [ "$input" = "g" ]; then
+    g
+elif [ "$input" = "s" ]; then
+    s
+elif [ "$input" = "q" ]; then
+    exit 0
+fi
+done
