@@ -13,9 +13,13 @@ Terminal user interface scripts for popular cli tools such as apt, systemctl, gi
 
 ## Installation
 ### Ubuntu/Debian-based
-Download .deb package from [Releases](https://git.digitalstudium.com/digitalstudium/run/releases), then install it
+Download latest `.deb` package:
 ```
-sudo apt install ~/Downloads/tui-scripts_*.deb
+curl -O "https://git.digitalstudium.com/digitalstudium/tui-scripts/releases/download/latest/tui-scripts_$(curl -s https://git.digitalstudium.com/digitalstudium/tui-scripts/raw/branch/main/VERSION)-1.deb"
+```
+Then install it:
+```
+sudo apt install ./tui-scripts_*.deb
 ```
 ### Other linux distros
 Install dependencies: `fzf`, `dialog`, `xdotool`, `x11-xkb-utils`
