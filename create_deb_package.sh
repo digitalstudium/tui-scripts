@@ -15,7 +15,7 @@ Description: GUI scripts
 EOL
 
 
-for script in a f g lk r s; do
+for script in a k g r s; do
   cp $script gui-scripts_$(cat VERSION)-1/usr/local/bin
 done
 
