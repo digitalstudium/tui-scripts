@@ -8,6 +8,7 @@ Terminal user interface scripts for popular cli tools such as apt, systemctl, gi
 - `s` - for managing systemd services
 - `k` - for managing kubernetes (depends on kubectl)
 - `r` - for running named commands from ~/.aliases.txt file
+
 ![Sripts in action](./images/scripts_in_action.gif)
 
 ## Installation
@@ -22,5 +23,5 @@ Install dependencies: `fzf`, `dialog`, `xdotool`, `x11-xkb-utils`
 Then clone this repo and copy all scripts to one of the PATH folder:
 ```
 git clone https://git.digitalstudium.com/digitalstudium/tui-scripts.git
-sudo cp tui-scripts/{a,g,s,r,k} /usr/local/bin/
+sudo cp tui-scripts/src/{a,g,s,r,k} /usr/local/bin/
 ```

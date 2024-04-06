@@ -16,7 +16,7 @@ EOL
 
 
 for script in a k g r s; do
-  cp $script tui-scripts_$(cat VERSION)-1/usr/local/bin
+  cp src/$script tui-scripts_$(cat VERSION)-1/usr/local/bin
 done
 
 dpkg-deb --build tui-scripts_$(cat VERSION)-1
