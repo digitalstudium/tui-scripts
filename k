@@ -16,7 +16,7 @@ if [ "$resource" = "Pods" ]; then
     action=$(DIALOGRC=/tmp/.dialogrc dialog --stdout --erase-on-exit --menu "Choose action for $pod in $namespace" 10 40 0 "Logs" 1 "Describe pod" 2 "Exec -it" 3 "Delete pod" 4)
   fi
   if [ ! -z "$action" ]; then
-    xdotool type --delay 0 "kubectl -n $namespace ${action,,} $pod" && xdotool key --delay 0 Return 
+    xdotool type --delay 0 "kubectl -n $namespace ${action,,} $pod" && xdotool key --delay 0 KP_Enter
   fi
 elif [ "$resource" = "Services" ]; then 
   svc=$(kubectl -n $namespace get svc --no-headers | awk '{ print $1 }' | fzf --multi --cycle --reverse --preview "kubectl get svc -n $namespace {1} -o yaml")
@@ -24,7 +24,7 @@ elif [ "$resource" = "Services" ]; then
     action=$(DIALOGRC=/tmp/.dialogrc dialog --stdout --erase-on-exit --menu "Choose action for $pod in $namespace" 10 40 0 "Get endpoints" 1 "Edit service" 2)
   fi
   if [ ! -z "$action" ]; then
-    xdotool type --delay 0 "kubectl -n $namespace ${action,,} $svc" && xdotool key --delay 0 Return 
+    xdotool type --delay 0 "kubectl -n $namespace ${action,,} $svc" && xdotool key --delay 0 KP_Enter
   fi
 fi	
 
