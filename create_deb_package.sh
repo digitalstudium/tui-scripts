@@ -1,9 +1,9 @@
-rm -rf gui-scripts*
-mkdir -p gui-scripts_$(cat VERSION)-1/usr/local/bin
-mkdir -p gui-scripts_$(cat VERSION)-1/DEBIAN
+rm -rf tui-scripts*
+mkdir -p tui-scripts_$(cat VERSION)-1/usr/local/bin
+mkdir -p tui-scripts_$(cat VERSION)-1/DEBIAN
 
-cat > gui-scripts_$(cat VERSION)-1/DEBIAN/control << EOL
-Package: gui-scripts
+cat > tui-scripts_$(cat VERSION)-1/DEBIAN/control << EOL
+Package: tui-scripts
 Version: $(cat VERSION)-1
 Section: base
 Priority: optional
@@ -16,9 +16,9 @@ EOL
 
 
 for script in a k g r s; do
-  cp $script gui-scripts_$(cat VERSION)-1/usr/local/bin
+  cp $script tui-scripts_$(cat VERSION)-1/usr/local/bin
 done
 
-dpkg-deb --build gui-scripts_$(cat VERSION)-1
+dpkg-deb --build tui-scripts_$(cat VERSION)-1
 
 

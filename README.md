@@ -15,15 +15,15 @@ See [Screenshots](#screenshots) section
 ### Ubuntu/Debian-based
 Download .deb package from [Releases](https://git.digitalstudium.com/digitalstudium/run/releases), then install it
 ```
-sudo apt install ~/Downloads/gui-scripts_*.deb
+sudo apt install ~/Downloads/tui-scripts_*.deb
 ```
 ### Other linux distros
 Install dependencies: `fzf`, `dialog`, `xdotool`, `x11-xkb-utils`
 
 Then clone this repo and copy all scripts to one of the PATH folder:
 ```
-git clone https://git.digitalstudium.com/digitalstudium/gui-scripts.git
-sudo cp gui-scripts/{a,g,s,r,k} /usr/local/bin/
+git clone https://git.digitalstudium.com/digitalstudium/tui-scripts.git
+sudo cp tui-scripts/{a,g,s,r,k} /usr/local/bin/
 ```
 
 ## Screenshots
