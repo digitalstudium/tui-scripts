@@ -8,8 +8,7 @@ Terminal user interface scripts for popular cli tools such as apt, systemctl, gi
 - `s` - for managing systemd services
 - `k` - for managing kubernetes (depends on kubectl)
 - `r` - for running named commands from ~/.aliases.txt file
-
-See [Screenshots](#screenshots) section
+![Sripts in action](./images/scripts_in_action.svg)
 
 ## Installation
 ### Ubuntu/Debian-based
@@ -25,16 +24,3 @@ Then clone this repo and copy all scripts to one of the PATH folder:
 git clone https://git.digitalstudium.com/digitalstudium/tui-scripts.git
 sudo cp tui-scripts/{a,g,s,r,k} /usr/local/bin/
 ```
-
-## Screenshots
-### s
-![Choose service](./screenshots/2024-03-16-192529_1883x1000_scrot.png)
-![Choose action](./screenshots/2024-03-16-192537_749x517_scrot.png)
-### g
-![Choose action](./screenshots/2024-03-16-191200_847x602_scrot.png)
-![Add commit message](./screenshots/2024-03-16-191212_753x423_scrot.png)
-### a
-![Choose action](./screenshots/2024-03-16-191235_719x514_scrot.png)
-![Choose package](./screenshots/2024-03-16-191251_1897x1003_scrot.png)
-### r
-![Choose command && run](./screenshots/2024-03-16-192622_1882x215_scrot.png)
