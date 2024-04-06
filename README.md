@@ -8,7 +8,7 @@ Terminal user interface scripts for popular cli tools such as apt, systemctl, gi
 - `s` - for managing systemd services
 - `k` - for managing kubernetes (depends on kubectl)
 - `r` - for running named commands from ~/.aliases.txt file
-![Sripts in action](./images/scripts_in_action.svg)
+![Sripts in action](./images/scripts_in_action.gif)
 
 ## Installation
 ### Ubuntu/Debian-based
