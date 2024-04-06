@@ -6,9 +6,8 @@ GUI scripts for popular cli tools, based on dialog and fzf
 - `a` - for managing apt packages
 - `g` - for managing git repo
 - `s` - for managing systemd services
+- `k` - for managing kubernetes (depends on kubectl)
 - `r` - for running named commands from ~/.aliases.txt file
-- `f` - open `lf` file manager
-- `lk` - listen for keys above (except `r`)
 
 See [Screenshots](#screenshots) section
 
@@ -24,7 +23,7 @@ Install dependencies: `fzf`, `dialog`, `xdotool`, `x11-xkb-utils`
 Then clone this repo and copy all scripts to one of the PATH folder:
 ```
 git clone https://git.digitalstudium.com/digitalstudium/gui-scripts.git
-sudo cp gui-scripts/{a,g,s,r} /usr/local/bin/
+sudo cp gui-scripts/{a,g,s,r,k} /usr/local/bin/
 ```
 
 ## Screenshots
