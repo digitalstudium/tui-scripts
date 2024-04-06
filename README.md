@@ -1,6 +1,6 @@
 # TUI scripts
 ## Description
-Terminal user interface scripts for popular cli tools, based on dialog and fzf
+Terminal user interface scripts for popular cli tools such as apt, systemctl, git, kubectl. Based on dialog and fzf 
 
 ## Scripts
 - `a` - for managing apt packages
