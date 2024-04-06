@@ -1,6 +1,6 @@
-# GUI scripts
+# TUI scripts
 ## Description
-GUI scripts for popular cli tools, based on dialog and fzf
+Terminal user interface scripts for popular cli tools, based on dialog and fzf
 
 ## Scripts
 - `a` - for managing apt packages
