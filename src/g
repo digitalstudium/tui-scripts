@@ -6,10 +6,26 @@ cat > /tmp/.dialogrc << EOL
 tag_color = (BLACK,WHITE,ON)
 EOL
 set +ex
-action=$(DIALOGRC=/tmp/.dialogrc dialog --stdout --erase-on-exit --menu "Choose the action for git" 10 40 0 'Add all && Commit && Push' 1 "Add all && Commit" 2 "Reset soft" 3 "Reset hard" 4 "Status" 5 "Clone submodules" 6)
 
-#echo $action
-#exit
+# Define menu items and their numbers
+MENU_ITEMS=(
+  "Add all && Commit && Push"
+  "Add all && Commit"
+  "Reset soft"
+  "Reset hard"
+  "Status"
+  "Clone submodules"
+)
+
+if [ -z "$1" ]; then
+  options=""
+  for ((i=0; i<${#MENU_ITEMS[@]}; i++)); do
+    options+=" \"${MENU_ITEMS[$i]}\" $i"
+  done	
+    action=$(eval $(echo DIALOGRC=/tmp/.dialogrc dialog --stdout --erase-on-exit --menu \'Choose the action for git\' 10 40 0 $options))
+else
+    action=${MENU_ITEMS[$1]}
+fi
 
 if [[ $action == "Add all && Commit && Push" ]]; then 
   commit_message=$(DIALOGRC=/tmp/.dialogrc dialog --stdout --erase-on-exit --title "$action" --inputbox "Enter the commit message:" 8 40)
