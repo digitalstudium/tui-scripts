@@ -26,5 +26,5 @@ Install dependencies: `fzf`, `dialog`, `xdotool`, `x11-xkb-utils`
 Then clone this repo and copy all scripts to one of the PATH folder:
 ```
 git clone https://git.digitalstudium.com/digitalstudium/tui-scripts.git
-sudo cp tui-scripts/src/{a,g,s,r,k} /usr/local/bin/
+sudo cp tui-scripts/src/{a,g,s,r} /usr/local/bin/
 ```
