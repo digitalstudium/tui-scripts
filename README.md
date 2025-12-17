@@ -6,25 +6,18 @@ Scripts designed to enhance your productivity with CLI tools such as `apt`, `sys
 - `a` - for managing `apt` packages
 - `g` - for managing `git` repositories
 - `s` - for managing systemd services
-- `r` - for running named commands from `~/.aliases.txt` file
 
 ![Sripts in action](./images/scripts_in_action.gif)
 
 ## Installation
-### Ubuntu/Debian-based
-Download latest `.deb` package:
-```
-curl -O "https://git.digitalstudium.com/digitalstudium/tui-scripts/releases/download/latest/tui-scripts_$(curl -s https://git.digitalstudium.com/digitalstudium/tui-scripts/raw/branch/main/VERSION)-1.deb"
-```
-Then install it:
-```
-sudo apt install ./tui-scripts_*.deb
-```
-### Other linux distros
+### Linux
 Install dependencies: `fzf`, `dialog`, `xdotool`, `x11-xkb-utils`
-
+e. g. on Debian/Ubuntu:
+```bash
+sudo apt install fzf dialog xdotool x11-xkb-utils -y
+```
 Then clone this repo and copy all scripts to one of the PATH folder:
 ```
-git clone https://git.digitalstudium.com/digitalstudium/tui-scripts.git
+git clone https://github.com/digitalstudium/tui-scripts.git
 sudo cp tui-scripts/src/{a,g,s,r} /usr/local/bin/
 ```
